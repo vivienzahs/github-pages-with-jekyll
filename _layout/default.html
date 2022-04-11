@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{page.title}}</title>
+  </head>
+  <body>
+    <h1>{{page.title}}</h1>
+    {{content}}
+    <p>
+      Tagged 
+      {% for tag in page.tags %}
+      <a class="post" href="/tag/{{tag}}">#{{tag}}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+  </body>
+</html>
